@@ -8,25 +8,27 @@ package square
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
 
-import(
+import (
 	"math"
 )
 
 type intCustomType int
 
-const(
-	SidesCircle intCustomType = 0
+const (
+	SidesCircle   intCustomType = 0
 	SidesTriangle intCustomType = 3
-	SidesSquare intCustomType = 4
+	SidesSquare   intCustomType = 4
 )
 
 func CalcSquare(sideLen float64, sidesNum intCustomType) float64 {
 	switch sidesNum {
-		case 0: return sideLen * sideLen * math.Pi / 2
-		case 3: return sideLen * sideLen * math.Sqrt(3)/4
-		case 4: return sideLen * sideLen
+	case 0:
+		return sideLen * sideLen * math.Pi
+	case 3:
+		return sideLen * sideLen * math.Sqrt(3) / 4
+	case 4:
+		return sideLen * sideLen
 	default:
-		return 0
+		return 0.0
 	}
 }
-

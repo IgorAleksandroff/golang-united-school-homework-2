@@ -9,7 +9,6 @@ package square
 // CalcSquare(10.0, SidesCircle)
 
 import(
-	"fmt"
 	"math"
 )
 
